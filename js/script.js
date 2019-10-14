@@ -23,6 +23,7 @@ $(function() {
 
 
     // Con show en vez de colultar muestra el elemento
+    // Anteriormente el elemento debe de estar oculto
     $('#menu').on('click', function() {
         $('#navegacion').show();
     });
