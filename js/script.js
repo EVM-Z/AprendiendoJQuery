@@ -1,17 +1,31 @@
-$(function(){
+$(function() {
     'use strict';
 
-    // Remueve el primer elemento del DOM
-    $('main article:first').remove();
+    // Con on esperamos un evento
+    // $('div.logo img').on('click', function() {
+    // console.log("Has hecho click en el logo");
 
-    // Clonamos un elemento
-    var copia=$('main article:last').clone();
-    // Lo colocamos en el elemento main, que es el padre de los article
-    // append lo agrega al final
-    // $('main').append(copia);
+    // This es el elemento que causa el evento
+    // Hacemos desaparecer el logo
+    // $(this).remove();
 
-    // prepend lo agrega el inicio
-    // $('main').prepend(copia);
+    // Mouseenter es como el hover en CSS
+    // Se activa cuando el mouse pasa sobre el logo
+    // $('div.logo img').on('mouseenter', function() {
+    //     console.log("Has pasado el mouse sobre el logo");
+    // });
 
-    $(copia).appendTo('main');
+
+    // Mouseleave es cuando esta fuera de un elemento
+    // $('div.logo img').on('mouseleave', function() {
+    //     console.log("Estas fuera del logo");
+    // });
+
+
+    // Con show en vez de colultar muestra el elemento
+    $('#menu').on('click', function() {
+        $('#navegacion').show();
+    });
+
+
 });
