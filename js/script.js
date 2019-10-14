@@ -1,32 +1,20 @@
 $(function() {
     'use strict';
 
-    // Con on esperamos un evento
-    // $('div.logo img').on('click', function() {
-    // console.log("Has hecho click en el logo");
+    // Remarcamos el logo con borde amarillo
+    $('div.logo img').addClass('activo');
 
-    // This es el elemento que causa el evento
-    // Hacemos desaparecer el logo
-    // $(this).remove();
+    // Mostramos el menu de navegacion
+    $('.navegacion').show();
 
-    // Mouseenter es como el hover en CSS
-    // Se activa cuando el mouse pasa sobre el logo
-    // $('div.logo img').on('mouseenter', function() {
-    //     console.log("Has pasado el mouse sobre el logo");
-    // });
+    // Aplicamos el marco al primer articulo
+    $('main article:first').addClass('activo');
 
-
-    // Mouseleave es cuando esta fuera de un elemento
-    // $('div.logo img').on('mouseleave', function() {
-    //     console.log("Estas fuera del logo");
-    // });
-
-
-    // Con show en vez de colultar muestra el elemento
-    // Anteriormente el elemento debe de estar oculto
-    $('#menu').on('click', function() {
-        $('#navegacion').show();
+    $('.navegacion ul li a').on('click', function(e) {
+        // Quitamos la clase de saraltado amarillo del ultimo click
+        $('.navegacion ul li a').removeClass('activo');
+        e.preventDefault();
+        $(this).addClass('activo');
     });
-
 
 });
