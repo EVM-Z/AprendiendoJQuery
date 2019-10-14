@@ -35,7 +35,7 @@ div.contenedor {
 
 .navegacion {
     background-color: #db008d;
-    display: none;
+    /* display: none; */
 }
 
 nav {
