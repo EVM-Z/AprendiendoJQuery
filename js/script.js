@@ -1,21 +1,14 @@
 $(function() {
     'use strict';
 
-    $('.logo img').on('click', function() {
-        // Encojemos el logo por despues de un click y por medio de una animacion
-        $(this).animate({ 'width': '200px' }, 1000);
+    // Escondemos el primer articulo al hacer click en el logo
+    $('.logo img').click(function() {
+        $('main article:first').slideUp(1000);
     });
 
-    $('main article img').on('mouseenter', aumentarImagen);
-    $('main article img').on('mouseleave', disminuirImagen);
-
-    function aumentarImagen() {
-        $(this).animate({ 'width:': '100%' });
-    }
-
-    function disminuirImagen() {
-        $(this).animate({ 'width': '350px' });
-    }
-
+    // Escondemos el primer articulo y lo volvemos a aparecer con el aside que esta a la derecha
+    $('aside').click(function() {
+        $('main article:first').slideDown(1000);
+    });
 
 });
