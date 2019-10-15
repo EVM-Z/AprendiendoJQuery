@@ -1,22 +1,33 @@
 $(function() {
     'use strict';
 
-    $('div.logo img').on('click', cargarAjax);
+    var proximosViajes = ['Londres', 'Valencia', 'Madrid', 'Paris', 'Milan'];
 
-    function cargarAjax() {
-        $.ajax('promociones.txt', {
-            success: agregarContenido,
-            type: 'GET',
-            datatype: 'text'
-        });
-    }
+    $.each(proximosViajes, function(i, v) {
+        // i=Indice del arreglo empezando con 0
+        // v=Valor del arreglo empezando con Londres
+        // console.log(v);
 
-    // Mostramos el contenido del txt al hacer click en el logo
-    function agregarContenido(data, status, jqxhr) {
-        // Donde mandamos los datos
-        $('aside').text(data);
-        // Mostramos en consola
-        console.log(status);
-    }
+        // Imprimos los valores debado del aside del arreglo declarado
+        if (i == 0) {
+            $('aside').append('<h2>Próximos Viajes</h2>');
+        }
+        $('aside').append('<li>' + v + '</li>');
+    });
+
+    var viajesPorFecha = {
+        primero: 'Londres',
+        segundo: 'Valencia',
+        tercero: 'Madrid',
+        cuarto: 'Paris',
+        quinto: 'Milan'
+    };
+
+    console.log(viajesPorFecha);
+
+    // Imprimimos tanto el indice como el valor del arreglo
+    $.each(viajesPorFecha, function(i, v) {
+        $('aside').append('<li>' + i + ' - ' + v + '</li>');
+    });
 
 });
