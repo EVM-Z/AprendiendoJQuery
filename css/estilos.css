@@ -122,6 +122,11 @@ div.servicios nav a {
     text-decoration: none;
 }
 
+div.servicios nav a.activo {
+    background-color: #db008d;
+    border: none;
+}
+
 div.servicios nav a:hover {
     background-color: #db008d;
 }
@@ -139,8 +144,10 @@ div.nuestros-servicios>div {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #e1e1e1;
+    background-color: #db008d;
     padding: 20px;
+    display: none;
+    color: white;
 }
 
 
